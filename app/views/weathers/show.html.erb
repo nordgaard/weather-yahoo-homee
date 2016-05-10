@@ -1,0 +1,11 @@
+ <h1>Forecast for your Area</h1>
+
+ <%= form_tag "/weathers", method: :post do %>
+  <div>
+    <%= label_tag :city %>
+    <%= text_field_tag :city %>
+    <%= label_tag :region %>
+    <%= text_field_tag :region %>
+    <%= submit_tag "Add To Cart" %>
+  </div>
+  <%end %>

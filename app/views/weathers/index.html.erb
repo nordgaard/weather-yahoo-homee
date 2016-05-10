@@ -1,0 +1,21 @@
+<h1><%= @locations %> </h1>
+
+<% @forecasts[0..4].each do |forecast| %>
+<div>Date: <%= forecast["date"]%></div> 
+<div>Day: <%= forecast["day"]%></div> 
+<div>High: <%= forecast["high"]%></div> 
+<div>Low: <%= forecast["low"]%></div> 
+<div> ------- </div>
+<% end %>
+
+ <%= form_tag "/weathers", method: :post do %>
+  <div>
+    <%= label_tag :city %>
+    <%= text_field_tag :city %>
+    <%= label_tag :region %>
+    <%= text_field_tag :region %>
+    <%= submit_tag "Add To Cart" %>
+  </div>
+  <%end %>
+
+
